@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: foundation
-# Recipe:: default
+# Recipe:: packages
 #
 # Copyright 2013, Trevor Bramwell
 #
@@ -17,4 +17,10 @@
 # limitations under the License.
 #
 
-include_recipe "foundation::packages"
+package "tmux" do
+    action :install
+end
+
+package "weechat-curses" do
+    action :install
+end
