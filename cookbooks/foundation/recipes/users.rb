@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: foundation
-# Recipe:: default
+# Recipe:: users
 #
 # Copyright 2013, Trevor Bramwell
 #
@@ -17,5 +17,6 @@
 # limitations under the License.
 #
 
-include_recipe "foundation::packages"
-include_recipe "foundation::users"
+users_manage "bramwelt" do
+    data_bag "bramwelt"
+end
