@@ -29,6 +29,6 @@ user "bramwelt" do
     home "/home/bramwelt"
     shell "/bin/bash"
     password "$1$aHAEiKN0$nwdbcOwW.SDHatY8Ug4Fs/"
-    support :managed_home => true
+    supports :managed_home => true
     action :create
 end
