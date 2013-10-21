@@ -23,12 +23,12 @@ group "bramwelt" do
 end
 
 user "bramwelt" do
+    supports :manage_home => true
     comment "Trevor Bramwell"
     uid 1000
     gid "bramwelt"
     home "/home/bramwelt"
     shell "/bin/bash"
     password "$1$aHAEiKN0$nwdbcOwW.SDHatY8Ug4Fs/"
-    supports :managed_home => true
     action :create
 end
