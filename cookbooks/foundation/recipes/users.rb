@@ -17,6 +17,18 @@
 # limitations under the License.
 #
 
-users_manage "bramwelt" do
-    data_bag "bramwelt"
+group "bramwelt" do
+    gid 1000
+    action :create
+end
+
+user "bramwelt" do
+    comment "Trevor Bramwell"
+    uid 1000
+    gid "bramwelt"
+    home "/home/bramwelt"
+    shell "/bin/bash"
+    password "$1$aHAEiKN0$nwdbcOwW.SDHatY8Ug4Fs/"
+    support :managed_home => true
+    action :create
 end
