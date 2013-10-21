@@ -1,0 +1,15 @@
+{
+  "name": "base",
+  "description": "Baseline of packages, users, and firewall",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[foundation::default]"
+  ],
+  "env_run_lists": {
+  }
+}
