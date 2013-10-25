@@ -3,12 +3,18 @@
   "description": "Baseline of packages, users, and firewall",
   "json_class": "Chef::Role",
   "default_attributes": {
+    "authorization": {
+      "sudo": {
+        "users": ["bramwelt"]
+      }
+    }
   },
   "override_attributes": {
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[foundation::default]"
+    "recipe[foundation::default]",
+    "recipe[sudo::default]"
   ],
   "env_run_lists": {
   }
