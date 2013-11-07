@@ -16,15 +16,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-package "tmux" do
-    action :install
-end
-
-package "weechat-curses" do
-    action :install
-end
-
-package "vim" do
-    action :install
+%w(
+  git
+  mtr
+  mutt
+  tmux
+  vim
+  weechat-curses
+).each do |pkg|
+    package pkg do
+        action :install
+    end
 end
